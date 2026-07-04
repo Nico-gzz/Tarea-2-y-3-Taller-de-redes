@@ -89,7 +89,8 @@ El detalle completo de la metodología, hipótesis y análisis de cada resultado
 
 ## Video Demostrativo
 
-**[PENDIENTE: agregar aquí el enlace al video público (6-8 min) que muestra el proceso completo de inyección y modificación de tráfico, según lo solicitado en el enunciado de la Tarea 3.]**
+Tarea 2 : https://youtu.be/9ynmeXAWJfw
+Tarea 3 : https://youtu.be/Hv-c5St5hl4
 
 ## Contacto
 
