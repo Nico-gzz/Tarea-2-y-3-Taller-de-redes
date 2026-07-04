@@ -1,6 +1,6 @@
 services:
   nginx-server:
-    image: nginx:latest
+    build: ./servidor
     container_name: servidor_http
     ports:
       - "8080:80"
@@ -8,11 +8,25 @@ services:
       - red_tarea2
 
   wget-client:
-    image: alpine:latest
+    build: ./cliente
     container_name: cliente_http
     command: tail -f /dev/null
+    cap_add:
+      - NET_ADMIN
     networks:
       - red_tarea2
+
+  scapy-mitm:
+    build: ./scapy-mitm
+    container_name: scapy_mitm
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    sysctls:
+      - net.ipv4.ip_forward=1
+    networks:
+      - red_tarea2
+    command: tail -f /dev/null
 
 networks:
   red_tarea2:
